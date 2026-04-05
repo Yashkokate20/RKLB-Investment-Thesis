@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rocket Lab (RKLB) — Investment Thesis | Stock Pitch</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SIDEBAR NAVIGATION
+════════════════════════════════════════════ -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-label="RKLB">
+      <circle cx="16" cy="16" r="15" stroke="#00A3E0" stroke-width="1.5"/>
+      <path d="M10 8 L10 24 M10 8 L18 8 Q22 8 22 12 Q22 16 18 16 L10 16 M18 16 L22 24" stroke="#00A3E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <span class="sidebar-ticker">RKLB</span>
+  </div>
+
+  <div class="sidebar-rating">
+    <span class="rating-badge">LONG</span>
+    <span class="rating-price">$95 PT</span>
+  </div>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#hero" class="nav-link active" data-section="hero">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12,2 22,20 2,20"/></svg>
+      Recommendation
+    </a></li>
+    <li><a href="#executive-summary" class="nav-link" data-section="executive-summary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+      Executive Summary
+    </a></li>
+    <li><a href="#company-overview" class="nav-link" data-section="company-overview">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2v10l6 3"/></svg>
+      Company Overview
+    </a></li>
+    <li><a href="#competitive" class="nav-link" data-section="competitive">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+      Comps Table
+    </a></li>
+    <li><a href="#pillars" class="nav-link" data-section="pillars">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V6l8-4 8 4v14"/><path d="M12 2v18"/></svg>
+      Thesis Pillars
+    </a></li>
+    <li><a href="#dcf" class="nav-link" data-section="dcf">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      DCF Model
+    </a></li>
+    <li><a href="#scenarios" class="nav-link" data-section="scenarios">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Scenario Analysis
+    </a></li>
+    <li><a href="#heatmap" class="nav-link" data-section="heatmap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+      Sensitivity
+    </a></li>
+    <li><a href="#monte-carlo" class="nav-link" data-section="monte-carlo">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M5 20V10m4 10V4m4 16V8m4 12v-6"/><circle cx="5" cy="7" r="1.5" fill="currentColor"/><circle cx="9" cy="2" r="1.5" fill="currentColor"/><circle cx="13" cy="5" r="1.5" fill="currentColor"/><circle cx="17" cy="11" r="1.5" fill="currentColor"/></svg>
+      Monte Carlo
+    </a></li>
+    <li><a href="#risks" class="nav-link" data-section="risks">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      Risk Matrix
+    </a></li>
+    <li><a href="#catalysts" class="nav-link" data-section="catalysts">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Catalysts
+    </a></li>
+    <li><a href="#football-field" class="nav-link" data-section="football-field">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      Valuation
+    </a></li>
+    <li><a href="#sources" class="nav-link" data-section="sources">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Sources
+    </a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    <div class="author-panel">
+      <div class="author-label">Prepared by</div>
+      <div class="author-name">Yash Kokate</div>
+      <div class="author-title">MS Finance Candidate</div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav toggle -->
+<button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+
+<!-- ═══════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════ -->
+<main class="main-content">
+
+  <!-- ─── 1. HERO ─────────────────────────────── -->
+  <section id="hero" class="section section--hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-glow"></div>
+
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="tag tag--accent">Stock Pitch Competition</span>
+        <span class="tag tag--muted">April 2026</span>
+        <span class="live-dot"><span class="dot-pulse"></span> Live Market</span>
+      </div>
+
+      <div class="hero-main">
+        <div class="hero-text">
+          <div class="hero-ticker-row">
+            <div class="hero-ticker">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="23" stroke="#00A3E0" stroke-width="1.5"/>
+                <path d="M16 12 L16 36 M16 12 L26 12 Q32 12 32 18 Q32 24 26 24 L16 24 M26 24 L32 36" stroke="#00A3E0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+              <div>
+                <h1 class="ticker-name">Rocket Lab USA</h1>
+                <p class="ticker-code">NASDAQ: RKLB</p>
+              </div>
+            </div>
+            <div class="recommendation-badge">
+              <span class="rec-action">LONG</span>
+              <span class="rec-conviction">High Conviction</span>
+            </div>
+          </div>
+
+          <blockquote class="thesis-statement">
+            "Rocket Lab is the only public company that can design, build, launch, and operate a complete satellite — and the market is pricing it like a rocket company instead of a vertically integrated space infrastructure platform."
+          </blockquote>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-card metric-card--primary">
+            <div class="metric-label">Current Price</div>
+            <div class="metric-value" id="currentPrice">$67.68</div>
+            <div class="metric-sub">Entry Point</div>
+          </div>
+          <div class="metric-card metric-card--target">
+            <div class="metric-label">12–18 Month Target</div>
+            <div class="metric-value">$95.00</div>
+            <div class="metric-sub">Base Case</div>
+          </div>
+          <div class="metric-card metric-card--return">
+            <div class="metric-label">Expected Return</div>
+            <div class="metric-value metric-value--green">+42%</div>
+            <div class="metric-sub">Base Case</div>
+          </div>
+          <div class="metric-card metric-card--ev">
+            <div class="metric-label">Prob.-Weighted EV</div>
+            <div class="metric-value metric-value--blue">$97</div>
+            <div class="metric-sub">+45% Expected</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-kpis">
+        <div class="kpi-item">
+          <span class="kpi-label">FY2025 Revenue</span>
+          <span class="kpi-value">$602M</span>
+          <span class="kpi-delta kpi-delta--up">+38% YoY</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-item">
+          <span class="kpi-label">Backlog</span>
+          <span class="kpi-value">$1.85B</span>
+          <span class="kpi-delta kpi-delta--up">+73% YoY</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-item">
+          <span class="kpi-label">Cash</span>
+          <span class="kpi-value">$1.1B</span>
+          <span class="kpi-delta kpi-delta--neutral">On Balance</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-item">
+          <span class="kpi-label">Q4 Gross Margin</span>
+          <span class="kpi-value">44.3%</span>
+          <span class="kpi-delta kpi-delta--up">Non-GAAP</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-item">
+          <span class="kpi-label">SDA Contract</span>
+          <span class="kpi-value">$816M</span>
+          <span class="kpi-delta kpi-delta--neutral">Tranche III</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-item">
+          <span class="kpi-label">Short Interest</span>
+          <span class="kpi-value">−65%</span>
+          <span class="kpi-delta kpi-delta--up">From Peak</span>
+        </div>
+        <div class="kpi-divider"></div>
+        <div class="kpi-item">
+          <span class="kpi-label">Next Earnings</span>
+          <span class="kpi-value">May 13</span>
+          <span class="kpi-delta kpi-delta--neutral">2026</span>
+        </div>
+      </div>
+
+      <div class="base-case-drivers">
+        <span class="bcd-label">Base Case Drivers</span>
+        <div class="bcd-items">
+          <div class="bcd-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h8M8 16h5"/></svg>
+            SDA Backlog Conversion
+          </div>
+          <div class="bcd-divider"></div>
+          <div class="bcd-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Space Systems Margin Expansion
+          </div>
+          <div class="bcd-divider"></div>
+          <div class="bcd-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+            SpaceX IPO Sector Re-Rating
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Scroll to explore the thesis
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 2. EXECUTIVE SUMMARY ─────────────────── -->
+  <section id="executive-summary" class="section">
+    <div class="container">
+      <div class="key-insight-banner">
+        <div class="kib-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="kib-content">
+          <span class="kib-label">Key Insight</span>
+          <p class="kib-text">FY2027 EBITDA inflection is driven by <strong>~$532M contracted SDA backlog conversion</strong> — not dependent on Neutron.</p>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <div class="section-eyebrow">02 / Executive Summary</div>
+        <h2 class="section-title">The Thesis at a Glance</h2>
+      </div>
+
+      <div class="exec-grid">
+        <div class="exec-summary-card">
+          <h3 class="exec-card-title">Core Mispricing</h3>
+          <p>The market assigns Rocket Lab a launch-company multiple (~45x NTM EV/Revenue) on a business that derives <strong>67% of revenue from multi-year government manufacturing contracts</strong>. Space Systems deserves defense-electronics multiples — not small-cap rocket company comps.</p>
+          <div class="exec-highlight">
+            <span class="highlight-label">Space Systems Revenue Share</span>
+            <span class="highlight-value">67%</span>
+          </div>
+        </div>
+
+        <div class="exec-summary-card">
+          <h3 class="exec-card-title">Non-Neutron Profitability</h3>
+          <p>The FY2027 EBITDA inflection is driven by <strong>$532M in peak SDA milestone revenue recognition</strong> — contracted backlog converting on a pre-determined schedule. Neutron success is additive upside, not the foundation.</p>
+          <div class="exec-highlight">
+            <span class="highlight-label">FY2027 SDA Peak Revenue</span>
+            <span class="highlight-value">$532M</span>
+          </div>
+        </div>
+
+        <div class="exec-summary-card">
+          <h3 class="exec-card-title">Sector Re-Rating</h3>
+          <p>SpaceX's IPO filing (confidential S-1, targeted mid-2026, ~$1.75T valuation) forces institutional capital to build space infrastructure mandates. <strong>Rocket Lab is the only liquid, vertically integrated public proxy</strong> — short interest has declined 65% from peak as institutions pre-position.</p>
+          <div class="exec-highlight">
+            <span class="highlight-label">Short Interest Decline</span>
+            <span class="highlight-value">−65%</span>
+          </div>
+        </div>
+
+        <div class="exec-summary-card exec-summary-card--wide">
+          <h3 class="exec-card-title">Catalyst Timeline — High Confidence Events</h3>
+          <div class="catalyst-mini-timeline">
+            <div class="cmt-item cmt-item--done">
+              <div class="cmt-dot"></div>
+              <div class="cmt-content">
+                <span class="cmt-date">Q1 2026</span>
+                <span class="cmt-event">$816M SDA Tranche III Secured</span>
+              </div>
+            </div>
+            <div class="cmt-item">
+              <div class="cmt-dot"></div>
+              <div class="cmt-content">
+                <span class="cmt-date">May 13, 2026</span>
+                <span class="cmt-event">Q1 Earnings — Guidance Upgrade Expected</span>
+                <span class="cmt-prob">72% confidence</span>
+              </div>
+            </div>
+            <div class="cmt-item">
+              <div class="cmt-dot"></div>
+              <div class="cmt-content">
+                <span class="cmt-date">Q2–Q3 2026</span>
+                <span class="cmt-event">SpaceX IPO Announcement → Sector Re-Rate</span>
+                <span class="cmt-prob">42% probability</span>
+              </div>
+            </div>
+            <div class="cmt-item">
+              <div class="cmt-dot"></div>
+              <div class="cmt-content">
+                <span class="cmt-date">Q3–Q4 2026</span>
+                <span class="cmt-event">Mynaric Integration + Combined Product Launch</span>
+                <span class="cmt-prob">78% confidence</span>
+              </div>
+            </div>
+            <div class="cmt-item">
+              <div class="cmt-dot"></div>
+              <div class="cmt-content">
+                <span class="cmt-date">Q4 2026</span>
+                <span class="cmt-event">Neutron Maiden Flight Window</span>
+                <span class="cmt-prob">38% probability</span>
+              </div>
+            </div>
+            <div class="cmt-item cmt-item--future">
+              <div class="cmt-dot"></div>
+              <div class="cmt-content">
+                <span class="cmt-date">FY2027</span>
+                <span class="cmt-event">SDA $532M Revenue Recognition Peak + EBITDA Inflection</span>
+                <span class="cmt-prob">High confidence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 3. COMPANY OVERVIEW ──────────────────── -->
+  <section id="company-overview" class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">03 / Company Overview</div>
+        <h2 class="section-title">The Only End-to-End Space Company</h2>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-chart-wrapper">
+          <h3 class="chart-title">Revenue Segment Mix</h3>
+          <p class="chart-subtitle">Space Systems now dominates — FY2025</p>
+          <div class="chart-container chart-container--donut">
+            <canvas id="segmentChart"></canvas>
+          </div>
+          <div class="segment-legend">
+            <div class="seg-leg-item">
+              <span class="seg-color" style="background:#00A3E0"></span>
+              <span class="seg-name">Space Systems</span>
+              <span class="seg-pct">67%</span>
+            </div>
+            <div class="seg-leg-item">
+              <span class="seg-color" style="background:#1a4a5e"></span>
+              <span class="seg-name">Launch Services</span>
+              <span class="seg-pct">33%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-revenue-chart">
+          <h3 class="chart-title">Revenue Trajectory</h3>
+          <p class="chart-subtitle">FY2022–FY2027E ($ Millions)</p>
+          <div class="chart-container chart-container--bar">
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
+
+        <div class="vertical-integration-card">
+          <h3 class="card-title">Vertical Integration — What Rocket Lab Builds In-House</h3>
+          <div class="vi-grid">
+            <div class="vi-item vi-item--primary">
+              <div class="vi-icon">🚀</div>
+              <div class="vi-label">Electron Launch Vehicle</div>
+              <div class="vi-sub">84 missions, 100% success 2025</div>
+            </div>
+            <div class="vi-item">
+              <div class="vi-icon">🛰️</div>
+              <div class="vi-label">Photon Spacecraft Platform</div>
+              <div class="vi-sub">Full satellite bus</div>
+            </div>
+            <div class="vi-item">
+              <div class="vi-icon">⚡</div>
+              <div class="vi-label">Reaction Wheels</div>
+              <div class="vi-sub">Attitude control systems</div>
+            </div>
+            <div class="vi-item">
+              <div class="vi-icon">☀️</div>
+              <div class="vi-label">Solar Panels</div>
+              <div class="vi-sub">In-house manufacturing</div>
+            </div>
+            <div class="vi-item">
+              <div class="vi-icon">📡</div>
+              <div class="vi-label">Laser Comm Terminals</div>
+              <div class="vi-sub">Mynaric acquisition</div>
+            </div>
+            <div class="vi-item">
+              <div class="vi-icon">🔭</div>
+              <div class="vi-label">EO/IR Payloads</div>
+              <div class="vi-sub">StarLite sensors (SDA)</div>
+            </div>
+            <div class="vi-item">
+              <div class="vi-icon">🔧</div>
+              <div class="vi-label">Rutherford Engine</div>
+              <div class="vi-sub">3D-printed, electric pump</div>
+            </div>
+            <div class="vi-item">
+              <div class="vi-icon">🏭</div>
+              <div class="vi-label">Auckland Machine Complex</div>
+              <div class="vi-sub">Precision manufacturing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 4. COMPETITIVE POSITIONING ──────────── -->
+  <section id="competitive" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">04 / Competitive Positioning</div>
+        <h2 class="section-title">Trading Comps Analysis</h2>
+        <p class="section-desc">RKLB trades at a premium multiple — justified by a 3× revenue lead, highest backlog coverage, and the only vertically integrated model in the public market.</p>
+      </div>
+
+      <div class="comps-controls">
+        <span class="comps-sort-label">Sort by:</span>
+        <button class="sort-btn active" data-sort="marketCap">Market Cap</button>
+        <button class="sort-btn" data-sort="ev_ntm">EV/NTM Rev</button>
+        <button class="sort-btn" data-sort="grossMargin">Gross Margin</button>
+        <button class="sort-btn" data-sort="backlog">Backlog</button>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="comps-table" id="compsTable">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th class="th-right">Market Cap</th>
+              <th class="th-right">EV</th>
+              <th class="th-right">LTM Rev</th>
+              <th class="th-right">NTM Rev</th>
+              <th class="th-right">EV/NTM</th>
+              <th class="th-right">Gross Margin</th>
+              <th class="th-right">Rev Growth</th>
+              <th class="th-right">Backlog</th>
+            </tr>
+          </thead>
+          <tbody id="compsBody"></tbody>
+        </table>
+      </div>
+      <p class="table-note">* Market data as of April 2026. Defense comps (LHX, NOC) included to illustrate re-rating potential if Space Systems awarded defense-electronics multiples.</p>
+    </div>
+  </section>
+
+  <!-- ─── 5. THESIS PILLARS ────────────────────── -->
+  <section id="pillars" class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">05 / Investment Thesis</div>
+        <h2 class="section-title">Three Independent Pillars</h2>
+        <p class="section-desc">Each pillar is independently sufficient to justify the long position. Together, they compound into an asymmetric risk/reward profile that is rare in public markets.</p>
+      </div>
+
+      <!-- Pillar I -->
+      <div class="pillar-block">
+        <div class="pillar-header">
+          <div class="pillar-number">I</div>
+          <div class="pillar-title-group">
+            <h3 class="pillar-title">Space Systems is a Defense Infrastructure Business</h3>
+            <p class="pillar-subtitle">Not a rocket company</p>
+          </div>
+          <div class="pillar-verdict">
+            <span class="verdict-badge verdict-badge--strong">Market Mispricing</span>
+          </div>
+        </div>
+
+        <div class="pillar-content">
+          <div class="pillar-text">
+            <p>Space Systems now represents <strong>~67% of revenue</strong> and is anchored by the <strong>$816M SDA Tranche III contract</strong> — a multi-year, milestone-structured defense relationship. The Space Development Agency's Tracking Layer constellation creates a visible <strong>$532M peak revenue recognition event in FY2027</strong>, driving EBITDA expansion independent of launch cadence or Neutron execution.</p>
+            <p>The market prices RKLB at ~45× NTM revenue using small-launch company comps. Defense electronics peers (LHX, NOC) trade at 2–4× revenue — the gap is the mispricing.</p>
+            <div class="pillar-key-data">
+              <div class="pkd-item">
+                <span class="pkd-val">$532M</span>
+                <span class="pkd-lab">FY2027 SDA Peak Revenue</span>
+              </div>
+              <div class="pkd-item">
+                <span class="pkd-val">67%</span>
+                <span class="pkd-lab">Space Systems Revenue Share</span>
+              </div>
+              <div class="pkd-item">
+                <span class="pkd-val">$1.85B</span>
+                <span class="pkd-lab">Total Backlog (+73% YoY)</span>
+              </div>
+            </div>
+          </div>
+          <div class="pillar-chart-area">
+            <h4 class="chart-title">Revenue Mix Shift (FY2021–2025)</h4>
+            <div class="chart-container chart-container--medium">
+              <canvas id="mixShiftChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillar II -->
+      <div class="pillar-block">
+        <div class="pillar-header">
+          <div class="pillar-number">II</div>
+          <div class="pillar-title-group">
+            <h3 class="pillar-title">Neutron is Upside Optionality, Not the Foundation</h3>
+            <p class="pillar-subtitle">A free call option on a 10× TAM expansion</p>
+          </div>
+          <div class="pillar-verdict">
+            <span class="verdict-badge verdict-badge--blue">Free Option</span>
+          </div>
+        </div>
+
+        <div class="pillar-content">
+          <div class="pillar-text">
+            <p>The base-case profitability trajectory does not depend on Neutron. However, Neutron expands Rocket Lab's <strong>total addressable market by roughly 10×</strong>, shifting from the ~$10B small-launch market into the <strong>~$100B+ medium-lift segment</strong>.</p>
+            <p>Even a 5% share of the medium-lift market represents revenue potential exceeding the current company scale. The market currently assigns <strong>minimal value to Neutron optionality</strong> — making it structurally similar to a deeply out-of-the-money call option that comes at no incremental cost to the investor.</p>
+            <div class="pillar-key-data">
+              <div class="pkd-item">
+                <span class="pkd-val">$10B</span>
+                <span class="pkd-lab">Small-Lift TAM (Current)</span>
+              </div>
+              <div class="pkd-item">
+                <span class="pkd-val">$100B+</span>
+                <span class="pkd-lab">Medium-Lift TAM (Neutron)</span>
+              </div>
+              <div class="pkd-item">
+                <span class="pkd-val">Q4 2026</span>
+                <span class="pkd-lab">Maiden Flight Target</span>
+              </div>
+            </div>
+          </div>
+          <div class="pillar-chart-area">
+            <h4 class="chart-title">TAM Expansion Potential ($B)</h4>
+            <div class="chart-container chart-container--medium">
+              <canvas id="tamChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillar III -->
+      <div class="pillar-block">
+        <div class="pillar-header">
+          <div class="pillar-number">III</div>
+          <div class="pillar-title-group">
+            <h3 class="pillar-title">SpaceX IPO Creates a Sector-Wide Re-Rating</h3>
+            <p class="pillar-subtitle">Rocket Lab is the only liquid public proxy</p>
+          </div>
+          <div class="pillar-verdict">
+            <span class="verdict-badge verdict-badge--gold">Macro Catalyst</span>
+          </div>
+        </div>
+
+        <div class="pillar-content">
+          <div class="pillar-text">
+            <p>SpaceX's confidential S-1 (filed early April 2026), targeting a mid-2026 listing at an estimated <strong>$1.75T valuation</strong>, is the largest potential IPO in history. This event forces institutional capital to build dedicated space infrastructure mandates — and Rocket Lab is the only liquid, vertically integrated public proxy.</p>
+            <p>Short interest has declined approximately <strong>65% from its peak</strong>, indicating institutional repositioning is already underway ahead of sector-level capital inflows. The positioning shift precedes the re-rating trigger.</p>
+            <div class="pillar-key-data">
+              <div class="pkd-item">
+                <span class="pkd-val">$1.75T</span>
+                <span class="pkd-lab">SpaceX IPO Target Valuation</span>
+              </div>
+              <div class="pkd-item">
+                <span class="pkd-val">−65%</span>
+                <span class="pkd-lab">Short Interest from Peak</span>
+              </div>
+              <div class="pkd-item">
+                <span class="pkd-val">42%</span>
+                <span class="pkd-lab">Probability of H1 2026 IPO</span>
+              </div>
+            </div>
+          </div>
+          <div class="pillar-chart-area">
+            <h4 class="chart-title">Short Interest Decline (%)</h4>
+            <div class="chart-container chart-container--medium">
+              <canvas id="shortInterestChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── 6. INTERACTIVE DCF ───────────────────── -->
+  <section id="dcf" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">06 / Financial Analysis</div>
+        <h2 class="section-title">Interactive DCF Model</h2>
+        <p class="section-desc">Adjust key assumptions to see how they impact the implied share price. Base case WACC of 15.6% uses CAPM (Rf 4.31% + β 2.14 × ERP 5.5%).</p>
+      </div>
+
+      <div class="dcf-layout">
+        <div class="dcf-controls">
+          <h3 class="controls-title">Model Assumptions</h3>
+
+          <div class="slider-group">
+            <div class="slider-row">
+              <label class="slider-label">FY2026E Revenue Growth</label>
+              <span class="slider-value" id="revGrowthVal">47%</span>
+            </div>
+            <input type="range" class="slider" id="revGrowth" min="20" max="80" value="47" step="1" />
+            <div class="slider-range-labels"><span>20%</span><span>80%</span></div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-row">
+              <label class="slider-label">FY2027E Revenue Growth</label>
+              <span class="slider-value" id="revGrowth27Val">45%</span>
+            </div>
+            <input type="range" class="slider" id="revGrowth27" min="15" max="70" value="45" step="1" />
+            <div class="slider-range-labels"><span>15%</span><span>70%</span></div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-row">
+              <label class="slider-label">Terminal EBITDA Margin</label>
+              <span class="slider-value" id="ebitdaMarginVal">35%</span>
+            </div>
+            <input type="range" class="slider" id="ebitdaMargin" min="15" max="55" value="35" step="1" />
+            <div class="slider-range-labels"><span>15%</span><span>55%</span></div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-row">
+              <label class="slider-label">WACC</label>
+              <span class="slider-value" id="waccVal">15.6%</span>
+            </div>
+            <input type="range" class="slider" id="wacc" min="8" max="22" value="15.6" step="0.2" />
+            <div class="slider-range-labels"><span>8%</span><span>22%</span></div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-row">
+              <label class="slider-label">Terminal Growth Rate</label>
+              <span class="slider-value" id="tgrVal">3.5%</span>
+            </div>
+            <input type="range" class="slider" id="tgr" min="1" max="6" value="3.5" step="0.5" />
+            <div class="slider-range-labels"><span>1%</span><span>6%</span></div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-row">
+              <label class="slider-label">EV/Revenue Multiple Premium</label>
+              <span class="slider-value" id="multPremiumVal">4.0×</span>
+            </div>
+            <input type="range" class="slider" id="multPremium" min="2" max="8" value="4" step="0.5" />
+            <div class="slider-range-labels"><span>2×</span><span>8×</span></div>
+          </div>
+
+          <button class="reset-btn" id="resetDCF">Reset to Base Case</button>
+        </div>
+
+        <div class="dcf-output">
+          <div class="dcf-implied-price">
+            <div class="ip-label">Implied Share Price</div>
+            <div class="ip-value" id="impliedPrice">$95.00</div>
+            <div class="ip-return" id="impliedReturn">+42% vs. current</div>
+            <div class="ip-bar-wrapper">
+              <div class="ip-bar">
+                <div class="ip-bar-fill" id="ipBarFill" style="width: 42%"></div>
+                <div class="ip-bar-current" style="left: 0%"></div>
+              </div>
+              <div class="ip-bar-labels">
+                <span>$38 Bear</span>
+                <span>$67 Current</span>
+                <span>$125+ Bull</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dcf-table-wrapper">
+            <h4 class="dcf-table-title">Projected Financials ($ Millions)</h4>
+            <table class="dcf-table" id="dcfTable">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th class="th-right">Revenue</th>
+                  <th class="th-right">EBITDA</th>
+                  <th class="th-right">EBITDA %</th>
+                  <th class="th-right">UFCF</th>
+                  <th class="th-right">PV(UFCF)</th>
+                </tr>
+              </thead>
+              <tbody id="dcfBody"></tbody>
+            </table>
+          </div>
+
+          <div class="dcf-bridge">
+            <div class="bridge-item">
+              <span class="bridge-label">PV of Cash Flows</span>
+              <span class="bridge-value" id="pvCFs">$1,247M</span>
+            </div>
+            <div class="bridge-item">
+              <span class="bridge-label">Terminal Value (PV)</span>
+              <span class="bridge-value" id="pvTV">$3,892M</span>
+            </div>
+            <div class="bridge-item">
+              <span class="bridge-label">Enterprise Value</span>
+              <span class="bridge-value" id="totalEV">$5,139M</span>
+            </div>
+            <div class="bridge-item">
+              <span class="bridge-label">Net Cash</span>
+              <span class="bridge-value">+$1,100M</span>
+            </div>
+            <div class="bridge-item bridge-item--total">
+              <span class="bridge-label">Equity Value / Share</span>
+              <span class="bridge-value" id="equityPerShare">$95.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 7. SCENARIO ANALYSIS ─────────────────── -->
+  <section id="scenarios" class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">07 / Risk / Reward</div>
+        <h2 class="section-title">Scenario Analysis</h2>
+        <p class="section-desc">The asymmetry favors being long — the base case is driven by contracted backlog conversion, while the largest upside scenarios depend on optional events not required for core execution.</p>
+      </div>
+
+      <div class="scenario-grid">
+        <div class="scenario-card scenario-card--bear">
+          <div class="sc-header">
+            <span class="sc-weight">15% weight</span>
+            <h3 class="sc-label">Bear Case</h3>
+            <div class="sc-price">$38</div>
+            <div class="sc-return sc-return--neg">−43%</div>
+          </div>
+          <div class="sc-body">
+            <ul class="sc-assumptions" role="list">
+              <li>Neutron delayed beyond 2028 or fails commercially</li>
+              <li>Space Systems margins fall below 35% non-GAAP gross</li>
+              <li>SDA contract scope materially reduced</li>
+              <li>Significant dilution (&gt;15% of outstanding shares)</li>
+              <li>Structural decline in satellite demand</li>
+            </ul>
+            <div class="sc-financials">
+              <div class="sc-fin-row"><span>FY2026E Rev</span><span>$720M</span></div>
+              <div class="sc-fin-row"><span>Gross Margin</span><span>32%</span></div>
+              <div class="sc-fin-row"><span>EV/NTM Rev</span><span>~4×</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scenario-card scenario-card--base scenario-card--highlighted">
+          <div class="sc-badge">Most Likely</div>
+          <div class="sc-header">
+            <span class="sc-weight">60% weight</span>
+            <h3 class="sc-label">Base Case</h3>
+            <div class="sc-price">$95</div>
+            <div class="sc-return sc-return--pos">+42%</div>
+          </div>
+          <div class="sc-body">
+            <ul class="sc-assumptions" role="list">
+              <li>SDA milestones track on schedule; $532M FY2027 peak</li>
+              <li>Space Systems margins expand to 40–45%</li>
+              <li>Backlog converts to revenue (3.1× coverage)</li>
+              <li>Neutron delayed, minimal revenue contribution</li>
+              <li>SpaceX IPO drives 10–15% sector re-rate</li>
+            </ul>
+            <div class="sc-financials">
+              <div class="sc-fin-row"><span>FY2026E Rev</span><span>$885M</span></div>
+              <div class="sc-fin-row"><span>Gross Margin</span><span>44%</span></div>
+              <div class="sc-fin-row"><span>EV/NTM Rev</span><span>~5.5×</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="scenario-card scenario-card--bull">
+          <div class="sc-header">
+            <span class="sc-weight">25% weight</span>
+            <h3 class="sc-label">Bull Case</h3>
+            <div class="sc-price">$125+</div>
+            <div class="sc-return sc-return--pos">+87%</div>
+          </div>
+          <div class="sc-body">
+            <ul class="sc-assumptions" role="list">
+              <li>Neutron maiden flight Q4 2026 — success</li>
+              <li>First Neutron commercial contract announced H1 2027</li>
+              <li>SpaceX IPO drives 25%+ sector re-rate</li>
+              <li>Additional DoD/NRO contract awards</li>
+              <li>Space Systems margins exceed 45%</li>
+            </ul>
+            <div class="sc-financials">
+              <div class="sc-fin-row"><span>FY2026E Rev</span><span>$950M+</span></div>
+              <div class="sc-fin-row"><span>Gross Margin</span><span>48%+</span></div>
+              <div class="sc-fin-row"><span>EV/NTM Rev</span><span>~8×</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scenario-chart-wrapper">
+        <h3 class="chart-title">Probability-Weighted Expected Value</h3>
+        <div class="ev-calc">
+          <div class="ev-row">
+            <span class="ev-label">Bear ($38 × 15%)</span>
+            <span class="ev-contrib">$5.70</span>
+          </div>
+          <div class="ev-row">
+            <span class="ev-label">Base ($95 × 60%)</span>
+            <span class="ev-contrib">$57.00</span>
+          </div>
+          <div class="ev-row">
+            <span class="ev-label">Bull ($125 × 25%)</span>
+            <span class="ev-contrib">$31.25</span>
+          </div>
+          <div class="ev-row ev-row--total">
+            <span class="ev-label">Expected Value</span>
+            <span class="ev-contrib ev-contrib--highlight">$93.95 (+39%)</span>
+          </div>
+        </div>
+
+        <div class="chart-container chart-container--bar" style="max-height:220px;">
+          <canvas id="scenarioChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 8. SENSITIVITY HEATMAP ───────────────── -->
+  <section id="heatmap" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">08 / Sensitivity Analysis</div>
+        <h2 class="section-title">WACC × Terminal Growth Rate Heatmap</h2>
+        <p class="section-desc">Implied share price across combinations of WACC and terminal growth rate. Base case at WACC 15.6% / TGR 3.5% yields $95. Green cells represent upside from current price; red cells represent downside.</p>
+      </div>
+
+      <div class="heatmap-wrapper">
+        <div class="heatmap-y-label">WACC →</div>
+        <div class="heatmap-container" id="heatmapContainer"></div>
+        <div class="heatmap-legend">
+          <span class="legend-text">$38 Bear</span>
+          <div class="legend-gradient"></div>
+          <span class="legend-text">$125+ Bull</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 8b. MONTE CARLO SIMULATION ───────────── -->
+  <section id="monte-carlo" class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">08b / Monte Carlo Simulation</div>
+        <h2 class="section-title">10,000-Path Valuation Simulation</h2>
+        <p class="section-desc">Revenue growth, EBITDA margin, and WACC are drawn from calibrated distributions across 10,000 independent paths. The histogram shows the full range of plausible outcomes — not a point estimate.</p>
+      </div>
+
+      <div class="mc-layout">
+        <!-- Left: controls + stats -->
+        <div class="mc-sidebar">
+          <div class="mc-controls-card">
+            <h3 class="mc-card-title">Simulation Parameters</h3>
+            <div class="mc-param-group">
+              <div class="mc-param-label">Revenue Growth '26 (μ / σ)</div>
+              <div class="mc-param-inputs">
+                <div class="mc-input-wrap"><label>μ</label><input type="number" id="mc-rev-mu" value="47" min="10" max="80" step="1" class="mc-input"/><span>%</span></div>
+                <div class="mc-input-wrap"><label>σ</label><input type="number" id="mc-rev-sigma" value="12" min="2" max="30" step="1" class="mc-input"/><span>%</span></div>
+              </div>
+            </div>
+            <div class="mc-param-group">
+              <div class="mc-param-label">Terminal EBITDA Margin (μ / σ)</div>
+              <div class="mc-param-inputs">
+                <div class="mc-input-wrap"><label>μ</label><input type="number" id="mc-margin-mu" value="35" min="10" max="55" step="1" class="mc-input"/><span>%</span></div>
+                <div class="mc-input-wrap"><label>σ</label><input type="number" id="mc-margin-sigma" value="8" min="1" max="20" step="1" class="mc-input"/><span>%</span></div>
+              </div>
+            </div>
+            <div class="mc-param-group">
+              <div class="mc-param-label">WACC (μ / σ)</div>
+              <div class="mc-param-inputs">
+                <div class="mc-input-wrap"><label>μ</label><input type="number" id="mc-wacc-mu" value="15.6" min="8" max="22" step="0.2" class="mc-input"/><span>%</span></div>
+                <div class="mc-input-wrap"><label>σ</label><input type="number" id="mc-wacc-sigma" value="2.5" min="0.5" max="6" step="0.5" class="mc-input"/><span>%</span></div>
+              </div>
+            </div>
+            <div class="mc-param-group">
+              <div class="mc-param-label">Terminal Growth Rate (μ / σ)</div>
+              <div class="mc-param-inputs">
+                <div class="mc-input-wrap"><label>μ</label><input type="number" id="mc-tgr-mu" value="3.5" min="1" max="6" step="0.5" class="mc-input"/><span>%</span></div>
+                <div class="mc-input-wrap"><label>σ</label><input type="number" id="mc-tgr-sigma" value="0.8" min="0.2" max="2" step="0.1" class="mc-input"/><span>%</span></div>
+              </div>
+            </div>
+            <button class="mc-run-btn" id="mcRunBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Re-run Simulation
+            </button>
+          </div>
+
+          <div class="mc-stats-card">
+            <h3 class="mc-card-title">Output Statistics</h3>
+            <div class="mc-stat-row mc-stat--p5">
+              <span class="mc-stat-label">5th Percentile (Downside)</span>
+              <span class="mc-stat-value" id="mc-p5">—</span>
+            </div>
+            <div class="mc-stat-row mc-stat--mean">
+              <span class="mc-stat-label">Mean</span>
+              <span class="mc-stat-value" id="mc-mean">—</span>
+            </div>
+            <div class="mc-stat-row mc-stat--median">
+              <span class="mc-stat-label">Median</span>
+              <span class="mc-stat-value" id="mc-median">—</span>
+            </div>
+            <div class="mc-stat-row mc-stat--p95">
+              <span class="mc-stat-label">95th Percentile (Upside)</span>
+              <span class="mc-stat-value" id="mc-p95">—</span>
+            </div>
+            <div class="mc-stat-divider"></div>
+            <div class="mc-stat-row mc-stat--prob">
+              <span class="mc-stat-label">P(Price &gt; $67.68)</span>
+              <span class="mc-stat-value" id="mc-prob-above">—</span>
+            </div>
+            <div class="mc-stat-row mc-stat--prob">
+              <span class="mc-stat-label">P(Price &gt; $95 target)</span>
+              <span class="mc-stat-value" id="mc-prob-target">—</span>
+            </div>
+            <div class="mc-stat-row mc-stat--std">
+              <span class="mc-stat-label">Std Deviation</span>
+              <span class="mc-stat-value" id="mc-std">—</span>
+            </div>
+            <div class="mc-stat-row mc-stat--paths">
+              <span class="mc-stat-label">Simulation Paths</span>
+              <span class="mc-stat-value">10,000</span>
+            </div>
+          </div>
+
+          <div class="mc-assumptions-card">
+            <h3 class="mc-card-title">Distribution Assumptions</h3>
+            <ul class="mc-assumptions-list" role="list">
+              <li>All inputs drawn from <strong>truncated normal distributions</strong></li>
+              <li>Revenue growth paths run FY2026–FY2030 (5 years)</li>
+              <li>WACC and TGR are correlated with macro regime</li>
+              <li>Net cash of $1.1B added to equity bridge</li>
+              <li>Diluted shares: 569.5M (base) ± 5% stochastic dilution</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: histogram -->
+        <div class="mc-chart-area">
+          <div class="mc-chart-header">
+            <h3 class="mc-chart-title">Distribution of Implied Share Prices</h3>
+            <div class="mc-legend">
+              <span class="mc-leg-item mc-leg--below"><span class="mc-leg-swatch"></span> Below current ($67.68)</span>
+              <span class="mc-leg-item mc-leg--above"><span class="mc-leg-swatch"></span> Above current</span>
+              <span class="mc-leg-item mc-leg--target"><span class="mc-leg-swatch mc-leg-swatch--dashed"></span> Target ($95)</span>
+            </div>
+          </div>
+          <div class="mc-loading" id="mcLoading">
+            <div class="mc-spinner"></div>
+            <span>Running 10,000 simulations…</span>
+          </div>
+          <div class="mc-canvas-wrap" id="mcCanvasWrap" style="display:none">
+            <canvas id="mcHistogram"></canvas>
+          </div>
+          <div class="mc-annotation-bar" id="mcAnnotationBar" style="display:none">
+            <div class="mc-ann" id="mcAnnP5">
+              <div class="mc-ann-line mc-ann-line--p5"></div>
+              <div class="mc-ann-label">P5</div>
+            </div>
+            <div class="mc-ann" id="mcAnnCurrent">
+              <div class="mc-ann-line mc-ann-line--current"></div>
+              <div class="mc-ann-label">Current</div>
+            </div>
+            <div class="mc-ann" id="mcAnnMean">
+              <div class="mc-ann-line mc-ann-line--mean"></div>
+              <div class="mc-ann-label">Mean</div>
+            </div>
+            <div class="mc-ann" id="mcAnnTarget">
+              <div class="mc-ann-line mc-ann-line--target"></div>
+              <div class="mc-ann-label">Target</div>
+            </div>
+            <div class="mc-ann" id="mcAnnP95">
+              <div class="mc-ann-line mc-ann-line--p95"></div>
+              <div class="mc-ann-label">P95</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 9. RISK MATRIX ───────────────────────── -->
+  <section id="risks" class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">09 / Risk Assessment</div>
+        <h2 class="section-title">Risk Matrix</h2>
+        <p class="section-desc">Probability vs. impact analysis of key risks. Click a risk bubble to view mitigant.</p>
+      </div>
+
+      <div class="risk-layout">
+        <div class="risk-matrix-wrapper">
+          <div class="risk-matrix" id="riskMatrix">
+            <div class="risk-axis-y">Probability →</div>
+            <div class="risk-axis-x">Impact on Thesis →</div>
+            <div class="risk-quadrant rq-ll"><span>Low Risk</span></div>
+            <div class="risk-quadrant rq-lr"><span>Watch List</span></div>
+            <div class="risk-quadrant rq-ul"><span>Monitor</span></div>
+            <div class="risk-quadrant rq-ur"><span>High Risk</span></div>
+            <canvas id="riskChart"></canvas>
+          </div>
+        </div>
+
+        <div class="risk-detail-panel" id="riskDetailPanel">
+          <h3 class="rdp-title">Risk Details</h3>
+          <p class="rdp-placeholder">Click a risk bubble on the matrix to view analysis and mitigants.</p>
+          <div class="rdp-content" id="rdpContent" style="display:none;">
+            <div class="rdp-risk-name" id="rdpName"></div>
+            <div class="rdp-row"><span class="rdp-label">Probability</span><span id="rdpProb"></span></div>
+            <div class="rdp-row"><span class="rdp-label">Impact</span><span id="rdpImpact"></span></div>
+            <div class="rdp-row rdp-row--full"><span class="rdp-label">Mitigant</span><p id="rdpMitigant"></p></div>
+            <div class="rdp-row rdp-row--full"><span class="rdp-label">Exit Trigger</span><p id="rdpExit"></p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-table-wrapper">
+        <table class="risk-table" id="riskTable">
+          <thead>
+            <tr>
+              <th>Risk Factor</th>
+              <th class="th-center">Probability</th>
+              <th class="th-center">Impact</th>
+              <th>Mitigant</th>
+              <th>Exit Trigger</th>
+            </tr>
+          </thead>
+          <tbody id="riskTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 10. CATALYST TIMELINE ───────────────── -->
+  <section id="catalysts" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">10 / Catalyst Timeline</div>
+        <h2 class="section-title">12–18 Month Catalyst Roadmap</h2>
+        <p class="section-desc">Tier 1 catalysts are high-confidence execution events. Tier 2 are binary events with outsized price impact. Probability-weighted expected upside from catalysts: +68%.</p>
+      </div>
+
+      <div class="catalyst-chart-wrapper">
+        <div class="chart-container" style="height:380px;">
+          <canvas id="catalystChart"></canvas>
+        </div>
+      </div>
+
+      <div class="catalyst-full-timeline">
+        <div class="tier-label">Tier 1 — High Confidence</div>
+        <div class="catalyst-cards">
+          <div class="cat-card cat-card--t1">
+            <div class="cat-prob">72%</div>
+            <div class="cat-timing">May 13, 2026</div>
+            <div class="cat-name">Q1 Earnings Beat + Guidance Upgrade</div>
+            <div class="cat-impact">+8% expected impact</div>
+          </div>
+          <div class="cat-card cat-card--t1">
+            <div class="cat-prob">68%</div>
+            <div class="cat-timing">H2 2026</div>
+            <div class="cat-name">Additional SDA Contract Wins</div>
+            <div class="cat-impact">+12% expected impact</div>
+          </div>
+          <div class="cat-card cat-card--t1">
+            <div class="cat-prob">78%</div>
+            <div class="cat-timing">Q3–Q4 2026</div>
+            <div class="cat-name">Mynaric Integration Milestones</div>
+            <div class="cat-impact">+9% expected impact</div>
+          </div>
+          <div class="cat-card cat-card--t1">
+            <div class="cat-prob">85%</div>
+            <div class="cat-timing">FY2027</div>
+            <div class="cat-name">Space Systems Margin Expansion</div>
+            <div class="cat-impact">+15% expected impact</div>
+          </div>
+          <div class="cat-card cat-card--t1">
+            <div class="cat-prob">90%</div>
+            <div class="cat-timing">FY2027</div>
+            <div class="cat-name">SDA $532M Revenue Recognition Peak</div>
+            <div class="cat-impact">EBITDA inflection</div>
+          </div>
+        </div>
+
+        <div class="tier-label tier-label--2">Tier 2 — Binary / High Impact</div>
+        <div class="catalyst-cards">
+          <div class="cat-card cat-card--t2">
+            <div class="cat-prob">38%</div>
+            <div class="cat-timing">Q4 2026</div>
+            <div class="cat-name">Neutron Maiden Flight</div>
+            <div class="cat-impact">+35% expected impact</div>
+          </div>
+          <div class="cat-card cat-card--t2">
+            <div class="cat-prob">42%</div>
+            <div class="cat-timing">Q2–Q3 2026</div>
+            <div class="cat-name">SpaceX IPO Announcement</div>
+            <div class="cat-impact">+18% expected impact</div>
+          </div>
+          <div class="cat-card cat-card--t2">
+            <div class="cat-prob">55%</div>
+            <div class="cat-timing">H1 2027</div>
+            <div class="cat-name">First Neutron Commercial Contract</div>
+            <div class="cat-impact">+22% expected impact</div>
+          </div>
+          <div class="cat-card cat-card--t2">
+            <div class="cat-prob">60%</div>
+            <div class="cat-timing">FY2026–27</div>
+            <div class="cat-name">Additional DoD / NRO Contract Awards</div>
+            <div class="cat-impact">+15% expected impact</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 11. FOOTBALL FIELD ───────────────────── -->
+  <section id="football-field" class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">11 / Valuation Summary</div>
+        <h2 class="section-title">Football Field — Valuation Ranges</h2>
+        <p class="section-desc">Implied price ranges across five valuation methodologies. Current price ($67.68) marked in blue. Target price ($95) represented by the vertical dotted line.</p>
+      </div>
+
+      <div class="chart-container" style="height:320px;">
+        <canvas id="footballChart"></canvas>
+      </div>
+
+      <div class="valuation-notes">
+        <div class="vn-item">
+          <span class="vn-method">DCF (Base)</span>
+          <span class="vn-range">$72 – $118</span>
+          <span class="vn-mid">~$95</span>
+        </div>
+        <div class="vn-item">
+          <span class="vn-method">EV/NTM Revenue (3–7×)</span>
+          <span class="vn-range">$56 – $131</span>
+          <span class="vn-mid">~$94</span>
+        </div>
+        <div class="vn-item">
+          <span class="vn-method">EV/FY2027E Revenue (3–6×)</span>
+          <span class="vn-range">$78 – $157</span>
+          <span class="vn-mid">~$117</span>
+        </div>
+        <div class="vn-item">
+          <span class="vn-method">Analyst Consensus</span>
+          <span class="vn-range">$69 – $120</span>
+          <span class="vn-mid">~$91</span>
+        </div>
+        <div class="vn-item">
+          <span class="vn-method">Defense Comps Re-Rate</span>
+          <span class="vn-range">$85 – $140</span>
+          <span class="vn-mid">~$112</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── 12. SOURCES ──────────────────────────── -->
+  <section id="sources" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">12 / Appendix</div>
+        <h2 class="section-title">Sources & Disclosures</h2>
+      </div>
+
+      <div class="what-wrong-box">
+        <h3 class="wwb-title">What Would Make Me Wrong</h3>
+        <div class="wwb-grid">
+          <div class="wwb-item">
+            <div class="wwb-icon">⚠️</div>
+            <div class="wwb-text">Neutron delayed beyond 2028 or fails commercially — reassess TAM optionality value</div>
+          </div>
+          <div class="wwb-item">
+            <div class="wwb-icon">⚠️</div>
+            <div class="wwb-text">Space Systems non-GAAP gross margin falls below 35% — signals structural deterioration</div>
+          </div>
+          <div class="wwb-item">
+            <div class="wwb-icon">⚠️</div>
+            <div class="wwb-text">SDA contract scope materially reduced by Congressional appropriations cuts</div>
+          </div>
+          <div class="wwb-item">
+            <div class="wwb-icon">⚠️</div>
+            <div class="wwb-text">Dilution exceeds ~15% of outstanding shares — capital structure risk</div>
+          </div>
+          <div class="wwb-item">
+            <div class="wwb-icon">⚠️</div>
+            <div class="wwb-text">Structural decline in satellite demand from macroeconomic contraction</div>
+          </div>
+          <div class="wwb-item">
+            <div class="wwb-icon">⚠️</div>
+            <div class="wwb-text">Peter Beck departure or material management disruption</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sources-grid">
+        <div class="source-category">
+          <h4 class="sc-title">Company Filings</h4>
+          <ul class="source-list" role="list">
+            <li>Rocket Lab Q4 2025 Earnings Release (SEC)</li>
+            <li>RKLB 10-K FY2025 — Annual Report</li>
+            <li>SDA Tranche III Contract Award ($816M)</li>
+            <li>Mynaric AG Acquisition — German Regulatory Approval</li>
+            <li>HASTE Block Buy Contract — 20 missions ($190M)</li>
+            <li>Peter Beck Compensation Action — March 30, 2026</li>
+          </ul>
+        </div>
+        <div class="source-category">
+          <h4 class="sc-title">Market Data & Research</h4>
+          <ul class="source-list" role="list">
+            <li>Perplexity Finance — RKLB Live Market Data</li>
+            <li>FRED DGS10 — 10-Year Treasury (4.31%)</li>
+            <li>Damodaran — Equity Risk Premium (5.5%)</li>
+            <li>Bloomberg — Analyst Consensus Estimates</li>
+            <li>Bank of America — $120 Price Target</li>
+            <li>Goldman Sachs — $69 Price Target</li>
+          </ul>
+        </div>
+        <div class="source-category">
+          <h4 class="sc-title">Industry & Macro</h4>
+          <ul class="source-list" role="list">
+            <li>Space Foundation — Space Economy Report 2025</li>
+            <li>Euroconsult — Satellite Manufacturing & Launch</li>
+            <li>Bryce Space — Global Launch Industry Report</li>
+            <li>SpaceX Confidential S-1 — April 1, 2026</li>
+            <li>Space Development Agency — Tranche Program</li>
+            <li>NASASpaceFlight — Neutron Development Updates</li>
+          </ul>
+        </div>
+        <div class="source-category">
+          <h4 class="sc-title">Disclosures</h4>
+          <ul class="source-list" role="list">
+            <li>This presentation is for informational purposes only</li>
+            <li>Not personalized financial advice</li>
+            <li>All financial projections are estimates</li>
+            <li>Past performance is not indicative of future results</li>
+            <li>Prepared as part of an academic investment research project.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="author-signature">
+        <div class="sig-line"></div>
+        <div class="sig-block">
+          <span class="sig-label">Prepared by</span>
+          <span class="sig-name">Yash Kokate</span>
+          <span class="sig-title">MS Finance Candidate</span>
+          <span class="sig-date">April 2026</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
