@@ -1,4 +1,4 @@
-# Rocket Lab (RKLB) — Interactive Investment Thesis
+# Rocket Lab (RKLB) Interactive Investment Thesis
 
 This project presents an institutional-grade investment thesis on Rocket Lab (RKLB), developed for the **2026 Perplexity Computer Stock Pitch Competition**.
 
