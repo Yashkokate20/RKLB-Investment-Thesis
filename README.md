@@ -30,7 +30,7 @@ All financial outputs update dynamically based on user inputs.
 
 View the full interactive thesis here:
 
-👉 https://yashkokate20.github.io/rklb-investment-thesis
+👉 https://yashkokate20.github.io/RKLB-Investment-Thesis/
 
 ## Tools Used
 
